@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShortUrl", "ShortUrl\ShortUrl.csproj", "{02C2BD99-DB14-4979-870B-E9FDB6BD12D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShortUrlTests", "ShortUrlTests\ShortUrlTests.csproj", "{6FA07DCD-8BED-489F-9171-F811B3EC7C6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02C2BD99-DB14-4979-870B-E9FDB6BD12D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02C2BD99-DB14-4979-870B-E9FDB6BD12D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02C2BD99-DB14-4979-870B-E9FDB6BD12D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02C2BD99-DB14-4979-870B-E9FDB6BD12D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FA07DCD-8BED-489F-9171-F811B3EC7C6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FA07DCD-8BED-489F-9171-F811B3EC7C6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FA07DCD-8BED-489F-9171-F811B3EC7C6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FA07DCD-8BED-489F-9171-F811B3EC7C6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28D18F52-53E6-497D-B08D-D77E4DE46CE1}
+	EndGlobalSection
+EndGlobal

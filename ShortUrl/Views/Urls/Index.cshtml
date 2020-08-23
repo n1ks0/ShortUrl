@@ -1,0 +1,55 @@
+﻿@model IEnumerable<ShortUrl.Models.Url>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+    <a asp-action="Create">Укоротить URL</a>
+</p>
+
+<body>
+    <table class="table" width="100%">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.LongUrl)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShortUrl)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreationDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Counter)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LongUrl)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ShortUrl)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreationDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Counter)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Редактировать</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Детали</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Удалить</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
