@@ -29,7 +29,7 @@ namespace ShortUrl
             services.AddControllersWithViews();
 
             services.AddDbContextPool<ShortUrlContext>(options => options
-                .UseMySql("Server=127.0.0.1;Database=shorturl;User=root;Password=123;", mySqlOptions => mySqlOptions
+                .UseMySql("Server=127.0.0.1;Database=shorturldb;User=root;Password=123;", mySqlOptions => mySqlOptions
                     .ServerVersion(new Version(10, 5, 5), ServerType.MySql)
             ));
 
@@ -59,9 +59,14 @@ namespace ShortUrl
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                //pattern: "{controller=Home}/{action=Index}/{id?}");
                 pattern: "{controller=Urls}/{action=Index}/{key?}");
             });
+
+            using (var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
+            {
+                var context = serviceScope.ServiceProvider.GetRequiredService<ShortUrlContext>();
+                context.Database.Migrate();
+            }
         }
     }
 }

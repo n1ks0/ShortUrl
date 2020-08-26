@@ -18,12 +18,14 @@ namespace ShortUrl.Models
         [DisplayName("Начальный URL")]
         public string LongUrl { get; set; }
 
-        //[Required]
+
+        /// <summary>
+        /// Храним в БД только ключ, без ссылки
+        /// </summary>
         [DisplayName("Короткий URL")]
         public string ShortUrl { get; set; }
 
         [Required]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("Дата создания")]
         public DateTime CreationDate { get; set; } = DateTime.UtcNow;
 
